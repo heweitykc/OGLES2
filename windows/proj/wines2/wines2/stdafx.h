@@ -10,6 +10,5 @@
 #include <stdio.h>
 #include <tchar.h>
 
-
-
 // TODO: reference additional headers your program requires here
+#include "GLES2/gl2.h"
