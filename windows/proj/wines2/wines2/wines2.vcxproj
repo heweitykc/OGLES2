@@ -51,7 +51,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\..\..\include;..\..\..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -80,14 +80,38 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\src\camera.h" />
+    <ClInclude Include="..\..\..\..\src\demo2.h" />
+    <ClInclude Include="..\..\..\..\src\EulerAngles.h" />
+    <ClInclude Include="..\..\..\..\src\geomtool.h" />
+    <ClInclude Include="..\..\..\..\src\MathUtil.h" />
+    <ClInclude Include="..\..\..\..\src\Matrix4x3.h" />
+    <ClInclude Include="..\..\..\..\src\Quaternion.h" />
+    <ClInclude Include="..\..\..\..\src\RotationMatrix.h" />
+    <ClInclude Include="..\..\..\..\src\shadersrc.h" />
+    <ClInclude Include="..\..\..\..\src\submesh.h" />
+    <ClInclude Include="..\..\..\..\src\TouchController.h" />
+    <ClInclude Include="..\..\..\..\src\Vector3.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="opengl.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="window.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c" />
-    <ClCompile Include="window.c" />
+    <ClCompile Include="..\..\..\..\src\camera.cpp" />
+    <ClCompile Include="..\..\..\..\src\demo2.cpp" />
+    <ClCompile Include="..\..\..\..\src\EulerAngles.cpp" />
+    <ClCompile Include="..\..\..\..\src\geomtool.cpp" />
+    <ClCompile Include="..\..\..\..\src\MathUtil.cpp" />
+    <ClCompile Include="..\..\..\..\src\Matrix4x3.cpp" />
+    <ClCompile Include="..\..\..\..\src\Quaternion.cpp" />
+    <ClCompile Include="..\..\..\..\src\RotationMatrix.cpp" />
+    <ClCompile Include="..\..\..\..\src\shadersrc.cpp" />
+    <ClCompile Include="..\..\..\..\src\TouchController.cpp" />
+    <ClCompile Include="..\..\..\..\src\Vector3.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

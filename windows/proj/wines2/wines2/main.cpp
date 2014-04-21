@@ -9,9 +9,8 @@
  */
 #include "main.h"
 #include "window.h"
-
-#include "GLES2/gl2.h"
-#include "EGL/egl.h"
+#include "opengl.h"
+#include "demo2.h"
 
 const unsigned int uiWidth  = 640;
 const unsigned int uiHeight = 480;
@@ -82,7 +81,7 @@ int main(int argc, char **argv)
 	GL_CHECK(glEnable(GL_CULL_FACE));
     GL_CHECK(glEnable(GL_DEPTH_TEST));
 
-	glClearColor(1.0f,1.0f,1.0f,1.0f);
+	glInit2(320,240);
 
 	time1 = GetTickCount();
 
@@ -97,7 +96,7 @@ int main(int argc, char **argv)
 		}
 
 		// render code
-		GL_CHECK(glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT));
+		glRender2();
 
 		if (!eglSwapBuffers(sEGLDisplay, sEGLSurface)) {
             printf("Failed to swap buffers.\n");
